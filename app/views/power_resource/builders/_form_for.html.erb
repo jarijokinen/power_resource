@@ -1,0 +1,23 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation">
+    <%= pluralize(resource.errors.count, "error") %>
+    prohibited this resource from being saved:
+    <ul>
+      <% resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(resource, url: resource_form_path) do |f| %>
+  <ul>
+    <% fields.each do |field| %>
+      <li>
+        <%= f.label(field) %>
+        <%= f.text_field(field) %>
+      </li>
+    <% end %>
+  </ul>
+  <%= f.submit %>
+<% end %>
