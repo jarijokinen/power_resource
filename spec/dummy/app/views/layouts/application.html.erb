@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dummy</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= "#{@title} | " unless @title.blank? %>Dummy</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><%= link_to('Posts', posts_path) %></li>
+        <li><%= link_to('Categories', categories_path) %></li>
+      </ul>
+      Backend: 
+      <ul>
+        <li><%= link_to('Posts', backend_posts_path) %></li>
+        <li><%= link_to('Categories', backend_categories_path) %></li>
+      </ul>
+    </nav>
+    <section>
+      <%= content_tag(:h1, @title) unless @title.blank? %>
+      <%= yield %>
+    </section>
+  </body>
 </html>

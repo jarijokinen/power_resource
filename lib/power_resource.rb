@@ -1,4 +1,5 @@
 require 'inherited_resources'
+require 'power_resource/configuration'
 require 'power_resource/engine'
 require 'power_resource/version'
 

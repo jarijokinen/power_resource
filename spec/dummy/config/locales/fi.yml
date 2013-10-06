@@ -1,0 +1,38 @@
+fi:
+  activerecord:
+    attributes:
+      post:
+        category_id: 'Kategoria'
+        title: 'Otsikko'
+        content: 'Sisältö'
+    models:
+      category:
+        one: 'Kategoria'
+        other: 'Kategoriat'
+      comment:
+        one: 'Kommentti'
+        other: 'Kommentit'
+      post:
+        one: 'Artikkeli'
+        other: 'Artikkelit'
+  power_resource:
+    actions:
+      new: 'Uusi'
+      edit: 'Muokkaa'
+      delete: 'Poista'
+      duplicate: 'Kopioi'
+    resource_actions:
+      new: 'Uusi %{downcased_resource_name}'
+      edit: 'Muokkaa %{resource_name}'
+      delete: 'Poista %{resource_name}'
+      duplicate: 'Kopioi %{resource_name}'
+    links:
+      post:
+        edit: 'Muokkaa'
+    titles:
+      post:
+        resource: 'Artikkeli nro %{resource_id}'
+        collection: 'Lista artikkeleista'
+        edit: 'Muokkaa artikkelia'
+    confirmations:
+      delete: 'Oletko varma?'

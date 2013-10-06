@@ -3,6 +3,8 @@ module PowerResource
     inherit_resources
     defaults route_prefix: ''
 
+    include PowerResource::BaseHelper
+
     def create
       create! { collection_url }
     end
@@ -13,18 +15,28 @@ module PowerResource
 
     protected
 
-    def resource_name
-      controller_name.tableize.singularize.to_sym
+    def permit_attributes
+      # Override this method in your controller:
+      #
+      #   class PostsController < PowerResource::BaseController
+      #     def permit_attributes
+      #       %w(title content)
+      #     end
+      #   end
+      #
+      # Or add default behaviour in your ApplicationController:
+      #
+      #   class ApplicationController < ActionController::Base
+      #     def permit_attributes
+      #       resource_human_attributes
+      #     end
+      #   end
     end
 
     def permitted_params
       params.permit(
-        resource_name => resource_class.attribute_names - denied_params
+        resource_name => permit_attributes
       )
-    end
-
-    def denied_params
-      %w(id created_at updated_at)
     end
   end
 end

@@ -1,28 +1,22 @@
 <% @title ||= collection_title %>
 
-<table>
+<table class="<%= collection_table_classes %>">
   <thead>
     <tr>
       <% attributes.each do |attribute_name| %>
-        <th><%= attribute_human_name(attribute_name) %></th>
+        <th><%= resource_attribute_human_name_for(attribute_name) %></th>
       <% end %>
       <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
-    <% collection.each do |resource| %>
+    <% collection.each do |row| %>
       <tr>
         <% attributes.each do |attribute_name| %>
-          <td><%= attribute_value(resource, attribute_name) %></td>
+          <td><%= attribute_value_for(row, attribute_name) %></td>
         <% end %>
-        <td class="actions"><%= render_actions_for(resource) %></td>
+        <td><%= render_actions_for(row) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%=
-  if defined?(Kaminari)
-    paginate(collection)
-  end
-%>
