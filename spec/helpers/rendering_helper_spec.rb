@@ -48,7 +48,7 @@ describe PowerResource::RenderingHelper do
           expected = '
             <form accept-charset="UTF-8" action="/posts/1" class="edit_post" 
               id="edit_post_1" method="post">
-              <div style="margin:0;padding:0;display:inline">
+              <div style="display:none">
                 <input name="utf8" type="hidden" value="&#x2713;" />
                 <input name="_method" type="hidden" value="patch" />
               </div>
@@ -89,7 +89,7 @@ describe PowerResource::RenderingHelper do
           expected = '
             <form accept-charset="UTF-8" action="/posts" class="new_post" 
               id="new_post" method="post">
-              <div style="margin:0;padding:0;display:inline">
+              <div style="display:none">
                 <input name="utf8" type="hidden" value="&#x2713;" />
               </div>
               <ul>

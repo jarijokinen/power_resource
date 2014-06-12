@@ -4,9 +4,9 @@ Power up RESTful resources!
 
 ## Requirements
 
-* Ruby 2.0 or greater
-* Rails 4.0 or greater
-* Active Record 4.0 or greater
+* Ruby 2.1 or greater
+* Rails 4.1 or greater
+* Active Record 4.1 or greater
 
 ## Installation
 
@@ -108,6 +108,7 @@ GitHub](https://github.com/jarijokinen/power_resource/issues).
 
 ## License
 
-MIT License. Copyright (c) 2013 [Jari Jokinen](http://jarijokinen.com). See
+MIT License. Copyright (c) 2013 - 2014 [Jari Jokinen](http://jarijokinen.com).
+See
 [LICENSE](https://github.com/jarijokinen/power_resource/blob/master/LICENSE.txt)
 for further details.

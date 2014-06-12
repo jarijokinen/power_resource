@@ -18,16 +18,16 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.platform = Gem::Platform::RUBY
-  spec.required_ruby_version = '>= 2.0.0'
+  spec.required_ruby_version = '>= 2.1.2'
 
-  spec.add_dependency 'rails', '~> 4.0.0'
-  spec.add_dependency 'activerecord', '~> 4.0.0'
-  spec.add_dependency 'inherited_resources', '~> 1.4.1'
+  spec.add_dependency 'rails', '~> 4.1.1'
+  spec.add_dependency 'activerecord', '~> 4.1.1'
+  spec.add_dependency 'inherited_resources', '~> 1.5.0'
 
-  spec.add_development_dependency 'bundler', '~> 1.3'
-  spec.add_development_dependency 'capybara', '~> 2.1.0'
-  spec.add_development_dependency 'database_cleaner', '~> 1.0.1'
+  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'capybara', '~> 2.3.0'
+  spec.add_development_dependency 'database_cleaner', '~> 1.3.0'
   spec.add_development_dependency 'rake', '~> 10.1.0'
   spec.add_development_dependency 'rspec-rails', '~> 2.14.0'
-  spec.add_development_dependency 'sqlite3', '~> 1.3.8'
+  spec.add_development_dependency 'sqlite3', '~> 1.3.9'
 end
